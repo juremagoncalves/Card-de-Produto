@@ -1,0 +1,169 @@
+:root {
+  --porple: #271a45;
+  --gray-100: #d9cdf7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialised;
+  background: var(--gray-100);
+}
+
+body,
+button {
+  font-family: "Crimson Pro", serif;
+  font-weight: 400;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.product {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.product img {
+  width: 28rem;
+  height: 14rem;
+}
+
+.icon {
+  position: absolute;
+  float: left;
+  top: 0;
+  margin-top: 0.5rem;
+  margin-right: 3rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.icon .hide {
+  display: none;
+}
+
+.start {
+  display: block;
+}
+
+.close {
+  display: block;
+}
+
+.info-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+p {
+  color: #271a45;
+  font-size: 0.6rem;
+  font-weight: 300;
+  line-height: 0.6rem;
+}
+
+h1 {
+  color: var(--porple);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+h3 {
+  color: var(--porple);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+button {
+  color: var(--porple);
+  background-color: transparent;
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 62.4rem;
+  border: 0.5px solid #271a45;
+  cursor: pointer;
+}
+
+.show-background {
+  animation: showBackground 0.9s;
+}
+
+@keyframes showBackground {
+  0% {
+    background-color: rgba(136, 215, 241, 0.795); 
+    border: 2px solid #46d1ff;
+  }
+  100% {
+    background-color: rgba(136, 215, 241, 0.089);
+    border: 2px solid #88d7f156;
+  }
+}
+
+@media(max-width: 825px){
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+  }
+
+  .product{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .icon {
+    position: absolute;
+    top: 18%;
+    margin-top: 0.5rem;
+  }
+
+  .info-container {
+    margin-top: -4.5rem;
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    
+  }
+
+}
+
+@media (max-width: 280px) {
+ .product img{
+    width: 22rem;
+   
+  }
+}
+
+
+
+
+
